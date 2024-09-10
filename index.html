@@ -8,6 +8,7 @@
   <title>🌏 Playground 🌔 🌌 🌈</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
     * { margin: 0; padding: 0; }
     *, *::before, *::after { box-sizing: border-box; }
@@ -21,6 +22,9 @@
     }
     @media (prefers-color-scheme: light) {
       body { color-scheme: light; color: black; background-color: white; }
+      .neon {
+        color: black;
+      }
     }
     @media (prefers-reduced-motion: reduce) {
       *, *::before, *::after {
@@ -32,26 +36,67 @@
       }
     }
     figure.v4l3ntlno {
-        display: flex;
-        font-family: "JetBrains Mono", monospace;
-        > img {
-          border-radius: 5px;
-          border-top-left-radius: 0px;
-          border-top-right-radius: 0px;
-          border-bottom-left-radius: 0px;
-        }
-        > figcaption {
-          writing-mode: vertical-rl;
-          text-orientation: upright;
-        }
+      display: flex;
+      font-family: "JetBrains Mono", monospace;
+      position: relative;
+      > figcaption {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        position: absolute;
+      }
+    }
+    figure.vallecillosmoya {
+      position: relative;
+      > img {
+        border-radius: 0 0 5px 0;
+      }
+      > .heart {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+      }
+    }
+    figure.neon-figure {
+      position: relative;
+      > .heart {
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        top: -30px
+      }
+      > .neon-text {
+        right: 0;
+        position: absolute;
+        bottom: 0;
+        font-size: 50px;
+        font-family: "Dela Gothic One", sans-serif;
+        color: white;
+        text-shadow:
+          0 0 7px #fff,
+          0 0 10px #fff,
+          0 0 21px #fff,
+          0 0 42px #0fa,
+          0 0 82px #0fa,
+          0 0 92px #0fa,
+          0 0 102px #0fa,
+          0 0 151px #0fa;
+      }
     }
   </style>
 </head>
 <body>
 <main>
   <figure class="v4l3ntlno">
-    <img src="https://drive.google.com/thumbnail?id=1CqkMezK5y6odsuxGCTZ8QYSi4aqU2E7_&sz=w1920-h937-iv2" alt="@v4l3ntlno">
+    <img src="https://storage.googleapis.com/playground_bucket_v4l3ntlno/IMG_1484.JPG" alt="@v4l3ntlno">
     <figcaption>@v4l3ntlno</figcaption>
+  </figure>
+  <figure class="vallecillosmoya">
+    <img src="https://storage.googleapis.com/playground_bucket_v4l3ntlno/FEE64EAD-D08D-4504-AB7A-3D521C35E669.JPG" alt="@vallecillosmoya">
+    <figcaption>@vallecillosmoya</figcaption>
+  </figure>
+  <figure class="neon-figure">
+    <img src="https://pub-821312cfd07a4061bf7b99c1f23ed29b.r2.dev/v1/dynamic/color/heart-dynamic-color.png" alt="heart" width="50" class="heart">
+    <span class="neon-text">OPEN</span>
   </figure>
 </main>
 </body>
